@@ -1,6 +1,10 @@
 
-@if (item$ | async) {
+<ng-container *ngIf="item$ | async as url">
+    <img (mousedown)="paused$.next(true)" (mouseup)="paused$.next(false)" [src]="url"/>
+  </ng-container>
+<!-- @if (item$ | async as url) {
 <ng-container>
-    <img (mousedown)="paused$.next(true)" (mouseup)="paused$.next(false)" [src]="items"/>
+    <img (mousedown)="paused$.next(true)" (mouseup)="paused$.next(false)" [src]="url"/>
 </ng-container>
-}
+} -->
+<!-- <p (mousedown)="paused$.next(true)" (mouseup)="paused$.next(false)">slider works! {{item$ | async}}</p> -->

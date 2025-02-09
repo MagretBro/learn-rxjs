@@ -19,7 +19,7 @@ export class AppComponent implements AfterViewInit {
 
   // region 
   showComponents = true;
-  showSlider = false;
+  showSlider = true;
   showFromEvent = true;
   
   @ViewChild('button') private button!: ElementRef;

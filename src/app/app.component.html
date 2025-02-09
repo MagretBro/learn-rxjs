@@ -16,11 +16,14 @@
 </div>
 
 <div *ngIf="showSlider" class="flex-row">
-    <app-slider-rxjs></app-slider-rxjs>
-    <app-slider-rxjs 
-  [items]="['./assets/01.jpg','/assets/02.jpg','/assets/03.jpg']">
-    ></app-slider-rxjs>
-    <app-slider
-  [items]="['/assets/01.jpeg','/assets/02.jpeg','/assets/03.jpeg']">
-    </app-slider>
+    <div class="flex-s">
+        <app-slider-rxjs 
+            [items]="['/assets/01.jpg','/assets/02.jpg','/assets/03.jpg']">
+        ></app-slider-rxjs>
+    </div>
+    <div class="flex-s">
+        <app-slider
+            [items]="['/assets/1.png','/assets/1.png','/assets/1.png']">
+        </app-slider>
+    </div>
 </div>

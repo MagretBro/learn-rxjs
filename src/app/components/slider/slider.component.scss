@@ -1,0 +1,26 @@
+.flex-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.flex-s {
+    flex: 1;
+    max-width: 400px;
+}
+
+app-slider-rxjs,
+app-slider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+img {
+    width: 350px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
