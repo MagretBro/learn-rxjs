@@ -1,0 +1,6 @@
+
+@if (item$ | async) {
+<ng-container>
+    <img (mousedown)="paused$.next(true)" (mouseup)="paused$.next(false)" [src]="items"/>
+</ng-container>
+}

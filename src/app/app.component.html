@@ -1,2 +1,26 @@
-<router-outlet />
-<div class="body">Look into your console    =>    =>    =>    =>    =>    =>    =>    </div>
+<!-- <router-outlet />
+<div class="body">Look into your console    =>    =>    =>    =>    =>    =>    =>    </div> -->
+
+<div [class.hide]="!showFromEvent">
+    <p><button #button> Click me </button></p>
+    <p>
+        <app-a *ngIf="isShowA1"></app-a>
+        <button (click)="isShowA1=!isShowA1">{{isShowA1?'Удалить Компонент':'Добавить Компонент'}}</button>
+    </p>
+    <p>
+        <app-a *ngIf="isShowA2"></app-a>
+        <button (click)="isShowA2=!isShowA2">{{isShowA2?'Удалить Компонент':'Добавить Компонент'}}</button>
+    </p>
+
+    <p><input #input></p>
+</div>
+
+<div *ngIf="showSlider" class="flex-row">
+    <app-slider-rxjs></app-slider-rxjs>
+    <app-slider-rxjs 
+  [items]="['./assets/01.jpg','/assets/02.jpg','/assets/03.jpg']">
+    ></app-slider-rxjs>
+    <app-slider
+  [items]="['/assets/01.jpeg','/assets/02.jpeg','/assets/03.jpeg']">
+    </app-slider>
+</div>
